@@ -77,7 +77,17 @@ function cookAndDeliverFood(callback){
   setTimeout(callback, 5000);
 }
 
-placeorder(1);
+
+function TestObject(){
+
+  this.name = 'Nimin';
+  this.age = 30;
+}
+
+var obj = new TestObject();
+console.log(obj.name + ' and ' + obj.age);
+
+/*placeorder(1);
 placeorder(2);
 placeorder(3);
-placeorder(4);
+placeorder(4);*/
