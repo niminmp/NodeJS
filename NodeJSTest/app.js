@@ -87,6 +87,10 @@ function TestObject(){
 var obj = new TestObject();
 console.log(obj.name + ' and ' + obj.age);
 
+
+var importTest = require('./movies');
+importTest.movie();
+
 /*placeorder(1);
 placeorder(2);
 placeorder(3);
