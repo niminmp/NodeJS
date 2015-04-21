@@ -6,16 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-//var users = require('./routes/users');
+var users = require('./routes/users');
 
 var app = express();
 
-console.log('test***************');
-
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hjs');
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));
@@ -61,47 +58,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-
-
-
-/*function placeorder(orderNumber){
-  console.log('placed order'+ orderNumber);
-
-  cookAndDeliverFood(function(){
-
-    console.log('cooked and delivered food for order#'+orderNumber);
-  })
-}
-
-function cookAndDeliverFood(callback){
-  setTimeout(callback, 5000);
-}
-
-
-function TestObject(){
-
-  this.name = 'Nimin';
-  this.age = 30;
-}
-
-var obj = new TestObject();
-console.log(obj.name + ' and ' + obj.age);
-
-
-var importTest = require('./movies');
-importTest.movie();
-
-var fs = require('fs');
-fs.writeFileSync("corn.txt", "This is my day");
-console.log(fs.readFileSync('corn.txt').toString());
-
-
-console.log(__dirname);*/
-
-/*placeorder(1);
-placeorder(2);
-placeorder(3);
-placeorder(4);*/
-
-
-
